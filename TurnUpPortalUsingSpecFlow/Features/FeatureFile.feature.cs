@@ -114,7 +114,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
-testRunner.Given("I navigate to TurnUp portal with valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I navigate to TurnUp portal with valid credentials \"Hari\" \"123123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
 testRunner.When("I navigate to Time and Material Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

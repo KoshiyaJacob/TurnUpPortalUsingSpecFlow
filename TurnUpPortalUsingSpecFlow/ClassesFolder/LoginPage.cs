@@ -12,7 +12,7 @@ namespace TurnUpPortalUsingSpecFlow.ClassesFolder
 {
     public class LoginPage : Commondriver
     {
-        public void Login_HomePage_Verification(IWebDriver driver)
+        public void Login_HomePage_Verification(IWebDriver driver, string username, string password)
         {
             
             driver.Navigate().GoToUrl("http://horse.industryconnect.io/Account/Login?ReturnUrl=%2f");
@@ -21,12 +21,12 @@ namespace TurnUpPortalUsingSpecFlow.ClassesFolder
 
 
             //Entering name, password and click on login
-            IWebElement username = driver.FindElement(By.Id("UserName"));
-            username.SendKeys("Hari");
+            IWebElement Username = driver.FindElement(By.Id("UserName"));
+            Username.SendKeys(username);
 
 
-            IWebElement password = driver.FindElement(By.Id("Password"));
-            password.SendKeys("123123");
+            IWebElement Password = driver.FindElement(By.Id("Password"));
+            Password.SendKeys(password);
 
 
             IWebElement clicklogin = driver.FindElement(By.XPath("//input[@type='submit']"));

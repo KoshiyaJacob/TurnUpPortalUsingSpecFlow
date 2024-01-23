@@ -17,12 +17,13 @@ namespace TurnUpPortalUsingSpecFlow.StepDefinitions
         CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
 
 
-
-        [Given(@"I navigate to TurnUp portal with valid credentials")]
-        public void GivenINavigateToTurnUpPortalWithValidCredentials()
+        [Given(@"I navigate to TurnUp portal with valid credentials ""([^""]*)"" ""([^""]*)""")]
+        public void GivenINavigateToTurnUpPortalWithValidCredentials(string username, string password)
         {
-            loginPage_Obj.Login_HomePage_Verification(driver);
+            loginPage_Obj.Login_HomePage_Verification(driver , username, password);
+
         }
+
 
         [When(@"I navigate to Time and Material Page")]
         public void WhenINavigateToTimeAndMaterialPage()
