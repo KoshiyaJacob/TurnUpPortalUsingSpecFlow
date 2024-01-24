@@ -4,7 +4,7 @@ Feature: Login to the TurnUp portal and Create Time and materials and try to edi
 @LoginAndCreate
 Scenario Outline: A Create time and material
 
-Given I navigate to TurnUp portal with valid credentials
+Given I navigate to TurnUp portal with valid credentials "Hari" "123123"
 When I navigate to Time and Material Page
 And Record in Time and material "<Code>" "<Description>" "<Price>" should be created
 Then the record should be saved "<Code>"
